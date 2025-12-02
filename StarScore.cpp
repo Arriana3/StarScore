@@ -56,19 +56,13 @@ double calcFinalScore(double s1, double s2, double s3, double s4, double s5)
 
 int main()
 {
-    double score1, score2, score3, score4, score5;
-    getScore(score1);
-    getScore(score2);
-    getScore(score3);
-    getScore(score4);
-    getScore(score5);
+	double score1, score2, score3, score4, score5;
 
-    double min = score1;
-    double max = score1;
-    for (int m = 1; m < 5; m++)
+    for(int i = 1; i <= 5; i++)
     {
-        
-    }
+      
+           
+	}
 
     double finalScore = calcFinalScore(score1, score2, score3, score4, score5);
 
