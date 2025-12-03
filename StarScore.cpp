@@ -24,47 +24,51 @@ void getScore(double& score)
     }
 }
 
-double IsLower(double a, double b)
+double IsLower(double score, double lowestscore)
 {
-    if (a < b)
+    if (score < lowestscore)
     {
-        return a;
+        lowestscore=score;
     }
-    else
+    else if (lowestscore == 0)
     {
-        return b;
+       lowestscore=score; 
     }
         
 }
 
-double IsHigher(double a, double b)
+double IsHigher(double score, double highestscore)
 {
-    if (a > b)
+    if (score > highestscore)
     {
-        return a;
+        highestscore=score;
     }
-    else 
+    else if (highestscore == 0)
     {
-        return b;
+        highestscore=score;
     }
 }
 
-double calcFinalScore(double s1, double s2, double s3, double s4, double s5)
+double calcFinalScore(double total, double highestscore, double lowestscore)
 {
-    
+  finalscore=total-highestscore-lowestscore
 }
 
 int main()
 {
-	double score1, score2, score3, score4, score5;
+	double score,total, finalscore, 
+	double lowestscore=0; 
+	double highestscore=0;
 
     for(int i = 1; i <= 5; i++)
     {
-      
-           
+      getScore()
+		isLower(score,lowestscore)
+		isHigher(score,highestscore)
+     total+=score      
 	}
 
-    double finalScore = calcFinalScore(score1, score2, score3, score4, score5);
+calcFinalScore(total,highestscore,lowestscore)
 
     cout << fixed << setprecision(1);
     cout << "Final score (highest and lowest dropped): " << finalScore << endl;
